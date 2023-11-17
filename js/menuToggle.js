@@ -2,13 +2,9 @@
 let toggleButton = document.getElementById("toggle");
 
 // Agrega un evento de clic al botón
-toggleButton.addEventListener("click", function() {
+toggleButton.addEventListener("click", function () {
     // Toggle de la clase "on" en el botón
-    if (toggleButton.classList.contains("on")) {
-        toggleButton.classList.remove("on");
-    } else {
-        toggleButton.classList.add("on");
-    }
+    toggleButton.classList.toggle("on");
 
     // Obtén el elemento con el id "menu"
     let menu = document.getElementById("menu");
@@ -20,3 +16,23 @@ toggleButton.addEventListener("click", function() {
         menu.style.display = "none";
     }
 });
+
+// Obtén todos los elementos con la clase "itemMenuCelu"
+let menuItems = document.querySelectorAll(".itemMenuCelu");
+
+// Agrega un controlador de eventos a cada elemento de menú para cerrar el menú cuando se hace clic
+menuItems.forEach(item => {
+    item.addEventListener("click", function () {
+        // Obtén el elemento con el id "menu"
+        let menu = document.getElementById("menu");
+
+        // Cierra el menú
+        menu.style.display = "none";
+
+        // Asegúrate de quitar la clase "on" si es necesario
+        if (toggleButton.classList.contains("on")) {
+            toggleButton.classList.remove("on");
+        }
+    });
+});
+
