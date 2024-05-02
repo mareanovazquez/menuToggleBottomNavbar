@@ -36,3 +36,9 @@ menuItems.forEach(item => {
     });
 });
 
+window.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape') {
+        menu.style.display = "none";
+        toggleButton.classList.remove("on")
+    }
+});
