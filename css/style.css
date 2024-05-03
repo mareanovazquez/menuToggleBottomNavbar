@@ -1,8 +1,3 @@
-/* Colors Fondo #F9F8F8 MenuSelected #89023E NavBar #EAE6E5 Fuente primaria #12130F*/
-/* Fuentes
-Principal font-family: 'DM Sans', sans-serif;
-Secundaria font-family: 'Playfair Display', serif;
- */
 /* RESET CSS */
 html,
 body,
@@ -146,16 +141,16 @@ html {
 
 body {
     background-color: #F9F8F8;
-    color: #12130F;
+    color: #453F78;
     font-family: "Space Grotesk", sans-serif;
 }
 
-.containerNavBar .navBar {
+.navBar {
     display: none;
 }
 
 header .navBarMobile {
-    background-color: #EAE6E5;
+    background-color: #FFF8E3;
     position: fixed;
     width: 100%;
     top: 0;
@@ -171,7 +166,7 @@ header .navBarMobile .brand {
 }
 
 header .navBarMobile .brand img {
-    width: 120px;
+    width: 50px;
 }
 
 /*Menu toggle*/
@@ -180,14 +175,15 @@ header .navBarMobile .brand img {
     height: 30px;
     margin-left: auto;
     padding: 12px;
-    background-color: #EAE6E5;
+    background-color: #FFF8E3;
 }
 
 #toggle div {
     width: 100%;
     height: 5px;
-    background: #12130F;
+    background: #453F78;
     margin: 4px auto;
+    border-radius: 5px;
     transition: all 0.3s ease-in-out;
     backface-visibility: hidden;
     z-index: 9999;
@@ -214,7 +210,7 @@ header .navBarMobile .brand img {
 
 
 header .navBarMobile .menuMobile {
-    background-color: #EAE6E5;
+    background-color: #FFF8E3;
 
     width: 100%;
     height: 70vh;
@@ -226,6 +222,7 @@ header .navBarMobile .menuMobile {
     margin: auto;
     display: none;
     z-index: 99999;
+    position: absolute;
 
 }
 
@@ -233,12 +230,12 @@ header .navBarMobile .menuMobile .itemMenuMobile {
     font-family: "Space Grotesk", sans-serif;
     text-decoration: none;
     font-size: 18px;
-    color: #12130F;
+    color: #453F78;
 }
 
 header .navBarMobile .menuMobile .itemMenuMobile:hover {
-    color: grey;
-    border-bottom: 2px solid #89023E;
+    color: #6A668D;
+    border-bottom: 2px solid #6A668D;
     transition: 0.4s ease-in-out;
 }
 
@@ -250,12 +247,12 @@ header .navBarMobile .menuMobile .socialMedia {
 }
 
 header .navBarMobile .menuMobile .socialMedia a {
-    color: #12130F;
+    color: #453F78;
     text-decoration: none;
 }
 
 header .navBarMobile .menuMobile .socialMedia a:hover {
-    font-size: 20px;
+    color: #6A668D;
     transition: .3s ease-in-out;
 }
 
@@ -265,9 +262,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
     font-size: 50px;
-    color: #BBB5BD;
+    color: #453F78;
 }
 
 main {
@@ -275,30 +274,33 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-family: 'DM Sans', sans-serif;
+    align-items: start;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 50px;
     background-image: url('../img/main-bg.jpg');
     background-size: cover;
     background-position: top;
     color: #BBB5BD;
+
 }
 
-
+main img {
+    display: none;
+}
 .seccionSegunda {
-    background-color: #478978;
-    }
+    background-color: #FFC94A;
+}
 
 .seccionTercera {
-    background-color: #F58A07;
+    background-color: #FFC526;
 }
 
 .seccionCuarta {
-    background-color: #DA4167;
+    background-color: #FFBE0D;
 }
 
 .seccionQuinta {
-    background-color: #083D77;
+    background-color: #FFB800;
 }
 
 /* Entre 992px y 1199px */
@@ -317,7 +319,7 @@ main {
         align-items: center;
         width: 100%;
 
-       /* Asegura que esté por encima de otros elementos */
+        /* Asegura que esté por encima de otros elementos */
         z-index: 9999;
 
         /* estilos del contenido */
@@ -334,7 +336,7 @@ main {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        
+
     }
 
     .navBar .itemsNavBar .itemMenu {
@@ -344,10 +346,14 @@ main {
         font-size: 20px;
         font-weight: 900;
         position: relative;
-        
+
     }
 
-    .navBar .itemsNavBar .itemMenu:hover {
+    .navBar .itemsNavBar .itemMenu.item-icon {
+        display: none;
+    }
+
+    .navBar .itemsNavBar .itemMenu:not(:first-child):hover {
         color: #FAFFD8;
         border-bottom: 2px solid #FAFFD8;
         margin-top: 2px;
@@ -362,7 +368,7 @@ main {
         left: 5%;
         width: 90%;
         border-radius: 5px;
-        background-color: #EAF2E3;
+        background-color: #FFF8E3;
         /* Puedes ajustar el color de fondo según tu diseño */
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
         /* Sombra para resaltar */
@@ -375,11 +381,26 @@ main {
         color: #453F78;
     }
 
-    .navBar.fixed .itemsNavBar .itemMenu:hover {
+    .navBar.fixed .itemsNavBar .itemMenu.item-icon {
+        display: inline-block;
+    }
+
+    .navBar.fixed .itemsNavBar .itemMenu img {
+        width: 50px;
+    }
+
+
+    .navBar.fixed .itemsNavBar .itemMenu:not(:first-child):hover {
         color: #6A668D;
         border-bottom: 2px solid #6A668D;
         margin-top: 2px;
     }
+
+    main img {
+        display: flex;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
 }
 
 @keyframes slideDown {
