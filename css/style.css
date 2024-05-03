@@ -4,48 +4,135 @@ Principal font-family: 'DM Sans', sans-serif;
 Secundaria font-family: 'Playfair Display', serif;
  */
 /* RESET CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
@@ -60,7 +147,7 @@ html {
 body {
     background-color: #F9F8F8;
     color: #12130F;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .containerNavBar .navBar {
@@ -126,7 +213,7 @@ header .navBarMobile .brand img {
 /* estilos MENÚ CELULAR*/
 
 
-header .navBarMobile .menuCelu {
+header .navBarMobile .menuMobile {
     background-color: #EAE6E5;
 
     width: 100%;
@@ -142,32 +229,32 @@ header .navBarMobile .menuCelu {
 
 }
 
-header .navBarMobile .menuCelu .itemMenuCelu {
-    font-family: 'Playfair Display', serif;
+header .navBarMobile .menuMobile .itemMenuMobile {
+    font-family: "Space Grotesk", sans-serif;
     text-decoration: none;
     font-size: 18px;
     color: #12130F;
 }
 
-header .navBarMobile .menuCelu .itemMenuCelu:hover {
+header .navBarMobile .menuMobile .itemMenuMobile:hover {
     color: grey;
     border-bottom: 2px solid #89023E;
     transition: 0.4s ease-in-out;
 }
 
-header .navBarMobile .menuCelu .socialMedia {
+header .navBarMobile .menuMobile .socialMedia {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: end;
 }
 
-header .navBarMobile .menuCelu .socialMedia a {
+header .navBarMobile .menuMobile .socialMedia a {
     color: #12130F;
     text-decoration: none;
 }
 
-header .navBarMobile .menuCelu .socialMedia a:hover {
+header .navBarMobile .menuMobile .socialMedia a:hover {
     font-size: 20px;
     transition: .3s ease-in-out;
 }
@@ -184,28 +271,23 @@ section {
 }
 
 main {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'DM Sans', sans-serif;
     font-size: 50px;
+    background-image: url('../img/main-bg.jpg');
+    background-size: cover;
+    background-position: top;
     color: #BBB5BD;
 }
 
-main img {
-    max-width: 100%; /* La imagen no superará el ancho del contenedor */
-    height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
-}
-.seccionPrimera {
-    background-color: #909CC2;
-
-}
 
 .seccionSegunda {
     background-color: #478978;
-}
+    }
 
 .seccionTercera {
     background-color: #F58A07;
@@ -227,74 +309,85 @@ main img {
         display: none;
     }
 
-    /* Estilo inicial de .containerNavBar */
-    .containerNavBar {
-        position: relative;
-        z-index: 1000;/* Asegura que esté por encima de otros elementos */
-    }
-
-    /* Estilo cuando .containerNavBar está fijo en la parte superior */
-    .containerNavBar.fixed {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #F9F8F8;
-        /* Puedes ajustar el color de fondo según tu diseño */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-        /* Sombra para resaltar */
-        animation: slideDown 0.7s ease; /* Duración, transición y tipo de animación */
-    }
-
-    @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-        }
-        to {
-            transform: translateY(0);
-        }
-    }
-
-
-    .containerNavBar .navBar {
+    .navBar {
         /* organización del contenido */
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
-        position: sticky;
-
-        /* Coloca el navBar en la parte superior de la ventana */
         width: 100%;
-        z-index: 1000;
-        /* Asegura que esté por encima de otros elementos */
+
+       /* Asegura que esté por encima de otros elementos */
+        z-index: 9999;
 
         /* estilos del contenido */
-        background-color: #EAE6E5;
         height: 50px;
+        position: relative;
+        margin-top: -50px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
     }
 
-    .containerNavBar .navBar .itemsNavBar {
-        width: 100%;
+    .navBar .itemsNavBar {
+        width: 80%;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
+        
     }
 
-    .containerNavBar .navBar .itemsNavBar .itemMenu {
+    .navBar .itemsNavBar .itemMenu {
         text-decoration: none;
-        color: #12130F;
-        display: inline;
-        font-family: 'Playfair Display', serif;
-        font-size: 18px;
+        color: #EAF2E3;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
         position: relative;
+        
     }
 
-    .containerNavBar .navBar .itemsNavBar .itemMenu:hover {
-        color: grey;
-        border-bottom: 2px solid #89023E;
+    .navBar .itemsNavBar .itemMenu:hover {
+        color: #FAFFD8;
+        border-bottom: 2px solid #FAFFD8;
+        margin-top: 2px;
         /* Añade una línea debajo en el estado de hover */
     }
 
+    /* Estilo cuando .containerNavBar está fijo en la parte superior */
+    .navBar.fixed {
+        margin-top: 0;
+        position: fixed;
+        top: 3%;
+        left: 5%;
+        width: 90%;
+        border-radius: 5px;
+        background-color: #EAF2E3;
+        /* Puedes ajustar el color de fondo según tu diseño */
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
+        /* Sombra para resaltar */
+        animation: slideDown 1.2s ease;
+        /* Duración, transición y tipo de animación */
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    .navBar.fixed .itemsNavBar .itemMenu {
+        color: #453F78;
+    }
+
+    .navBar.fixed .itemsNavBar .itemMenu:hover {
+        color: #6A668D;
+        border-bottom: 2px solid #6A668D;
+        margin-top: 2px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(4%);
+    }
 }

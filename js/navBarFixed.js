@@ -1,14 +1,15 @@
-document.addEventListener("scroll", function() {
-    let containerNavBar = document.querySelector(".containerNavBar");
+document.addEventListener("scroll", function () {
+    let navBarDesktop = document.getElementById('navbar-desktop')
     let sectionUno = document.getElementById("seccionUno");
 
     // Calcula la posición de sectionUno
-    let sectionUnoRect = sectionUno.getBoundingClientRect();
-
+    let sectionUnoRect = sectionUno.offsetTop + sectionUno.offsetHeight;
+    
     // Agrega o quita la clase según la posición de scroll
-    if (window.scrollY > sectionUnoRect.bottom) {
-        containerNavBar.classList.add("fixed");
+    if (window.scrollY > sectionUnoRect) {
+
+        navBarDesktop.classList.add("fixed");
     } else {
-        containerNavBar.classList.remove("fixed");
+        navBarDesktop.classList.remove("fixed");
     }
 });

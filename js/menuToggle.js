@@ -17,8 +17,8 @@ toggleButton.addEventListener("click", function () {
     }
 });
 
-// Obtén todos los elementos con la clase "itemMenuCelu"
-let menuItems = document.querySelectorAll(".itemMenuCelu");
+// Obtén todos los elementos con la clase "itemMenuMobile"
+let menuItems = document.querySelectorAll(".itemMenuMobile");
 
 // Agrega un controlador de eventos a cada elemento de menú para cerrar el menú cuando se hace clic
 menuItems.forEach(item => {
