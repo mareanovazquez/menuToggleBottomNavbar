@@ -1,3 +1,6 @@
+/* IMPORTAR VARIABLES */
+@import url('./variables.css');
+
 /* RESET CSS */
 html,
 body,
@@ -140,9 +143,9 @@ html {
 }
 
 body {
-    background-color: #F9F8F8;
-    color: #453F78;
-    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--bg-main);
+    color: var(--color-primary);
+    font-family: var(--font-family-primary);
 }
 
 .navBar {
@@ -150,43 +153,43 @@ body {
 }
 
 header .navBarMobile {
-    background-color: #FFF8E3;
+    background-color: var(--bg-navbar);
     position: fixed;
     width: 100%;
     top: 0;
-    height: 60px;
+    height: var(--navbar-height-mobile);
 }
 
 /*flex brand */
 header .navBarMobile .brand {
     display: inline-block;
     position: absolute;
-    left: 2px;
-    top: 2px;
+    left: var(--spacing-xs);
+    top: var(--spacing-xs);
 }
 
 header .navBarMobile .brand img {
-    width: 50px;
+    width: var(--icon-size-small);
 }
 
 /*Menu toggle*/
 #toggle {
-    width: 28px;
-    height: 30px;
+    width: var(--toggle-width);
+    height: var(--toggle-height);
     margin-left: auto;
-    padding: 12px;
-    background-color: #FFF8E3;
+    padding: var(--spacing-lg);
+    background-color: var(--bg-navbar);
 }
 
 #toggle div {
     width: 100%;
-    height: 5px;
-    background: #453F78;
-    margin: 4px auto;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    height: var(--toggle-bar-height);
+    background: var(--color-primary);
+    margin: var(--toggle-bar-margin) auto;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-fast);
     backface-visibility: hidden;
-    z-index: 9999;
+    z-index: var(--z-index-navbar);
     position: sticky;
 }
 
@@ -207,36 +210,44 @@ header .navBarMobile .brand img {
 }
 
 /* estilos MENÚ CELULAR*/
-
-
 header .navBarMobile .menuMobile {
-    background-color: #FFF8E3;
-
+    background-color: var(--bg-navbar);
     width: 100%;
-    height: 70vh;
-    padding: 10px;
-
-    line-height: 70px;
+    height: var(--menu-mobile-height);
+    padding: var(--spacing-md);
+    line-height: var(--menu-line-height);
     text-align: left;
-
     margin: auto;
-    display: none;
-    z-index: 99999;
+    z-index: var(--z-index-menu);
     position: absolute;
+    
+    /* Propiedades para la transición lateral - Estado inicial (cerrado) */
+    transform: translateX(var(--menu-slide-distance));
+    transition: transform var(--transition-menu-slide), 
+                opacity var(--transition-menu-slide), 
+                visibility var(--transition-menu-slide);
+    opacity: 0;
+    visibility: hidden;
+}
 
+/* Estado del menú cuando está visible */
+header .navBarMobile .menuMobile.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 header .navBarMobile .menuMobile .itemMenuMobile {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-family-primary);
     text-decoration: none;
-    font-size: 18px;
-    color: #453F78;
+    font-size: var(--font-size-medium);
+    color: var(--color-primary);
 }
 
 header .navBarMobile .menuMobile .itemMenuMobile:hover {
-    color: #6A668D;
-    border-bottom: 2px solid #6A668D;
-    transition: 0.4s ease-in-out;
+    color: var(--color-primary-light);
+    border-bottom: var(--border-width) solid var(--color-primary-light);
+    transition: var(--transition-medium);
 }
 
 header .navBarMobile .menuMobile .socialMedia {
@@ -247,60 +258,60 @@ header .navBarMobile .menuMobile .socialMedia {
 }
 
 header .navBarMobile .menuMobile .socialMedia a {
-    color: #453F78;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
 header .navBarMobile .menuMobile .socialMedia a:hover {
-    color: #6A668D;
-    transition: .3s ease-in-out;
+    color: var(--color-primary-light);
+    transition: var(--transition-fast);
 }
 
 section {
-    height: 70vh;
+    height: var(--section-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 800;
-    letter-spacing: 3px;
-    font-size: 50px;
-    color: #453F78;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-extra-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
 }
 
 main {
-    height: 100vh;
+    height: var(--main-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 50px;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-xl);
     background-image: url('../img/main-bg.jpg');
     background-size: cover;
     background-position: top;
-    color: #BBB5BD;
-
+    color: var(--color-secondary);
 }
 
 main img {
     display: none;
 }
+
 .seccionSegunda {
-    background-color: #FFC94A;
+    background-color: var(--bg-section-2);
 }
 
 .seccionTercera {
-    background-color: #FFC526;
+    background-color: var(--bg-section-3);
 }
 
 .seccionCuarta {
-    background-color: #FFBE0D;
+    background-color: var(--bg-section-4);
 }
 
 .seccionQuinta {
-    background-color: #FFB800;
+    background-color: var(--bg-section-5);
 }
 
 /* Entre 992px y 1199px */
@@ -320,33 +331,31 @@ main img {
         width: 100%;
 
         /* Asegura que esté por encima de otros elementos */
-        z-index: 9999;
+        z-index: var(--z-index-navbar);
 
         /* estilos del contenido */
-        height: 50px;
+        height: var(--navbar-height-desktop);
         position: relative;
-        margin-top: -50px;
-        background-color: transparent;
-        backdrop-filter: blur(10px);
+        margin-top: calc(var(--navbar-height-desktop) * -1);
+        background-color: var(--bg-transparent);
+        backdrop-filter: var(--backdrop-blur);
     }
 
     .navBar .itemsNavBar {
-        width: 80%;
+        width: var(--navbar-width-desktop);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-
     }
 
     .navBar .itemsNavBar .itemMenu {
         text-decoration: none;
-        color: #EAF2E3;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 900;
+        color: var(--text-light);
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-large);
+        font-weight: var(--font-weight-black);
         position: relative;
-
     }
 
     .navBar .itemsNavBar .itemMenu.item-icon {
@@ -354,9 +363,9 @@ main img {
     }
 
     .navBar .itemsNavBar .itemMenu:not(:first-child):hover {
-        color: #FAFFD8;
-        border-bottom: 2px solid #FAFFD8;
-        margin-top: 2px;
+        color: var(--text-light-hover);
+        border-bottom: var(--border-width) solid var(--text-light-hover);
+        margin-top: var(--spacing-xs);
         /* Añade una línea debajo en el estado de hover */
     }
 
@@ -364,21 +373,21 @@ main img {
     .navBar.fixed {
         margin-top: 0;
         position: fixed;
-        top: 3%;
-        left: 5%;
-        width: 90%;
-        border-radius: 5px;
-        background-color: #FFF8E3;
+        top: var(--navbar-position-fixed-top);
+        left: var(--navbar-position-fixed-left);
+        width: var(--navbar-width-fixed);
+        border-radius: var(--border-radius-sm);
+        background-color: var(--bg-navbar);
         /* Puedes ajustar el color de fondo según tu diseño */
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
+        box-shadow: var(--shadow-navbar);
         /* Sombra para resaltar */
-        animation: slideDown 1.2s ease;
+        animation: slideDown var(--transition-slow);
         /* Duración, transición y tipo de animación */
-        font-family: "Space Grotesk", sans-serif;
+        font-family: var(--font-family-primary);
     }
 
     .navBar.fixed .itemsNavBar .itemMenu {
-        color: #453F78;
+        color: var(--color-primary);
     }
 
     .navBar.fixed .itemsNavBar .itemMenu.item-icon {
@@ -386,21 +395,19 @@ main img {
     }
 
     .navBar.fixed .itemsNavBar .itemMenu img {
-        width: 50px;
+        width: var(--icon-size-small);
     }
 
-
     .navBar.fixed .itemsNavBar .itemMenu:not(:first-child):hover {
-        color: #6A668D;
-        border-bottom: 2px solid #6A668D;
-        margin-top: 2px;
+        color: var(--color-primary-light);
+        border-bottom: var(--border-width) solid var(--color-primary-light);
+        margin-top: var(--spacing-xs);
     }
 
     main img {
         display: flex;
-        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        filter: var(--drop-shadow);
     }
-
 }
 
 @keyframes slideDown {

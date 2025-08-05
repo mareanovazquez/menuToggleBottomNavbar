@@ -1,0 +1,114 @@
+/* ===========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   =========================================== */
+
+:root {
+    /* ===== COLORES PRINCIPALES ===== */
+    --color-primary: #453F78;
+    /* Color principal (texto, íconos) */
+    --color-primary-light: #6A668D;
+    /* Color principal claro (hover states) */
+    --color-secondary: #BBB5BD;
+    /* Color secundario (texto secundario) */
+
+    /* ===== COLORES DE FONDO ===== */
+    --bg-main: #F9F8F8;
+    /* Fondo principal del body */
+    --bg-navbar: #FFF8E3;
+    /* Fondo de navegación */
+    --bg-transparent: transparent;
+    /* Fondo transparente */
+
+    /* ===== COLORES DE SECCIONES ===== */
+    --bg-section-2: #FFC94A;
+    /* Sección segunda */
+    --bg-section-3: #FFC526;
+    /* Sección tercera */
+    --bg-section-4: #FFBE0D;
+    /* Sección cuarta */
+    --bg-section-5: #FFB800;
+    /* Sección quinta */
+
+    /* ===== COLORES DE TEXTO ===== */
+    --text-light: #EAF2E3;
+    /* Texto claro (navbar desktop) */
+    --text-light-hover: #FAFFD8;
+    /* Texto claro hover */
+
+    /* ===== TIPOGRAFÍA ===== */
+    --font-family-primary: "Space Grotesk", sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+    --font-weight-black: 900;
+
+    /* ===== TAMAÑOS DE FUENTE ===== */
+    --font-size-small: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 20px;
+    --font-size-xl: 50px;
+
+    /* ===== ESPACIADO ===== */
+    --spacing-xs: 2px;
+    --spacing-sm: 4px;
+    --spacing-md: 10px;
+    --spacing-lg: 12px;
+    --spacing-xl: 30px;
+
+    /* ===== DIMENSIONES ===== */
+    --navbar-height-mobile: 60px;
+    --navbar-height-desktop: 50px;
+    --section-height: 70vh;
+    --main-height: 100vh;
+
+    /* ===== ELEMENTOS DEL MENÚ TOGGLE ===== */
+    --toggle-width: 28px;
+    --toggle-height: 30px;
+    --toggle-bar-height: 5px;
+    --toggle-bar-margin: 4px;
+
+    /* ===== ELEMENTOS DEL MENÚ MÓVIL ===== */
+    --menu-mobile-height: 70vh;
+    --menu-line-height: 70px;
+    --menu-slide-distance: -100%;
+    /* Distancia para el slide lateral */
+
+    /* ===== BORDES Y RADIOS ===== */
+    --border-radius-sm: 5px;
+    --border-width: 2px;
+
+    /* ===== TRANSICIONES ===== */
+    --transition-fast: 0.3s ease-in-out;
+    --transition-medium: 0.4s ease-in-out;
+    --transition-slow: 1.2s ease;
+    --transition-menu-slide: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* ===== SOMBRAS ===== */
+    --shadow-navbar: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
+    --shadow-text: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    /* ===== Z-INDEX ===== */
+    --z-index-navbar: 9999;
+    --z-index-menu: 99999;
+
+    /* ===== BREAKPOINTS (para usar en media queries) ===== */
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    /* ===== DIMENSIONES RESPONSIVAS ===== */
+    --navbar-width-desktop: 80%;
+    --navbar-width-fixed: 90%;
+    --navbar-position-fixed-top: 3%;
+    --navbar-position-fixed-left: 5%;
+
+    /* ===== TAMAÑOS DE ÍCONOS ===== */
+    --icon-size-small: 50px;
+
+    /* ===== FILTROS ===== */
+    --backdrop-blur: blur(10px);
+    --drop-shadow: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+    /* ===== LETTER SPACING ===== */
+    --letter-spacing-wide: 3px;
+}
