@@ -1,13 +1,12 @@
 // Obtén el elemento con el id "toggle"
 let toggleButton = document.getElementById("toggle");
+// Obtén el elemento con el id "menu"
+let menu = document.getElementById("menu");
 
 // Agrega un evento de clic al botón
 toggleButton.addEventListener("click", function () {
     // Toggle de la clase "on" en el botón
     toggleButton.classList.toggle("on");
-
-    // Obtén el elemento con el id "menu"
-    let menu = document.getElementById("menu");
 
     // Alternar la visibilidad del menú con transición lateral suave
     menu.classList.toggle("show");
@@ -15,9 +14,7 @@ toggleButton.addEventListener("click", function () {
 
 // Función para cerrar el menú de manera consistente
 function closeMenu() {
-    let menu = document.getElementById("menu");
-    
-    // Remueve las clases para iniciar la animación de cierre
+      // Remueve las clases para iniciar la animación de cierre
     menu.classList.remove("show");
     toggleButton.classList.remove("on");
 }
@@ -41,10 +38,9 @@ window.addEventListener('keydown', (event) => {
 
 // Cerrar menú al hacer clic fuera de él
 document.addEventListener('click', (event) => {
-    let menu = document.getElementById("menu");
     let isClickInsideMenu = menu.contains(event.target);
     let isClickOnToggle = toggleButton.contains(event.target);
-    
+
     // Si el clic no fue dentro del menú ni en el botón toggle, cerrar el menú
     if (!isClickInsideMenu && !isClickOnToggle && menu.classList.contains("show")) {
         closeMenu();
